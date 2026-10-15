@@ -1,0 +1,6 @@
+{
+  "name": "Profesjonalny Kreator & Szablon CV",
+  "description": "Interaktywny, profesjonalny życiorys zawodowy (CV) z pełną edycją, eksportem do PDF, Word, JSON, załączaniem zdjęcia i aktualną klauzulą RODO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

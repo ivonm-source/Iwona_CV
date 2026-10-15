@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom Print Styles for Perfect A4 Layout Without Browser Headers/Footers */
+@media print {
+  @page {
+    size: A4 portrait;
+    /* margin: 0 eliminates browser headers (date, time, page title) and footers (site/github URL) */
+    margin: 0 !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  .cv-sheet-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .cv-document {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    /* Internal padding gives 12mm top/bottom and 14mm sides margins on the physical A4 paper */
+    padding: 12mm 14mm 12mm 14mm !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    box-sizing: border-box !important;
+  }
+
+  .page-break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Prevent awkward page cuts */
+  h1, h2, h3, h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
+/* Screen animations and subtle transitions */
+.cv-edit-active {
+  outline: 2px dashed #3b82f6;
+  outline-offset: 3px;
+  background-color: rgba(59, 130, 246, 0.04);
+  border-radius: 4px;
+}
